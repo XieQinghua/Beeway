@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+    <!--发布足迹title-->
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentTop="true"
+        android:background="@color/beeway_title_bule">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/icon_padding"
+            android:src="@drawable/icon_fanhui"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_center"
+                style="@style/beeway_white_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发布足迹"/>
+
+            <TextView
+                android:id="@+id/tv_track_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="美食"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_normal"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_publish"
+            style="@style/beeway_white_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="发布"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_layout"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_track_text"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="top|left"
+                android:hint="这一刻的想法..."
+                android:padding="5dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/font_size_middle"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.thvc.beeway.view.NoScrollGridView
+                    android:id="@+id/gv_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:verticalSpacing="5dp"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                style="@style/darkgray_line"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_user_place"
+                style="@style/beeway_black_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/icon_address"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/icon_go"
+                android:gravity="center_vertical"
+                android:text="选取景点所在位置"/>
+
+            <ImageView
+                style="@style/darkgray_line"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/tv_select_time"
+                style="@style/beeway_black_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/icon_time"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/icon_go"
+                android:gravity="center_vertical"
+                android:text="选择日期"/>
+
+            <ImageView
+                style="@style/darkgray_line"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/tv_synchronous"
+                style="@style/beeway_black_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/icon_youji"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/icon_go"
+                android:gravity="center_vertical"
+                android:text="同步到游记"/>
+
+            <ImageView
+                style="@style/darkgray_line"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/beeway_background_color"/>
+
+            <LinearLayout
+                android:id="@+id/ll_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_layouts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_expression"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="60dp"
+            android:background="#FFFF"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/im_expression"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/chatting_biaoqing_btn_normal"/>
+
+            <ImageView
+                android:id="@+id/ed_expression"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/chatting_setmode_keyboard_btn_normal"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="关闭"
+                android:textColor="#000"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/views"
+            style="@style/darkgray_line"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_face"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"></LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

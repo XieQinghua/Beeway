@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/beeway_title_bule">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:padding="13dp"
+            android:src="@drawable/icon_fanhui" />
+
+        <TextView
+            android:id="@+id/iv_title"
+            style="@style/beeway_white_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/iv_user_img"
+            android:text="我的设置" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_account_safe"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/beeway_background_color"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="账户安全"
+        android:textSize="@dimen/font_size_large" />
+
+    <ImageView style="@style/darkgray_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/tv_binding_email"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="绑定邮箱"
+            android:textSize="@dimen/font_size_large" />
+
+        <TextView
+            android:id="@+id/tv_unbundling_email"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/icon_go"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:text="绑定邮箱" />
+
+    </RelativeLayout>
+
+    <ImageView style="@style/darkgray_line" />
+
+    <TextView
+        android:id="@+id/tv_about_beeway"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/beeway_background_color"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="关于蜂友APP"
+        android:textSize="@dimen/font_size_large" />
+
+    <ImageView style="@style/darkgray_line" />
+
+    <TextView
+        android:id="@+id/tv_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:drawableRight="@drawable/icon_go"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="20dp"
+        android:text="意见反馈"
+        android:textSize="@dimen/font_size_large" />
+
+    <ImageView style="@style/darkgray_line" />
+
+    <TextView
+        android:id="@+id/tv_beeway_introduce"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:drawableRight="@drawable/icon_go"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="20dp"
+        android:text="蜂友介绍"
+        android:textSize="@dimen/font_size_large" />
+
+    <ImageView style="@style/darkgray_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="系统版本"
+            android:textSize="@dimen/font_size_large" />
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:gravity="center_vertical"
+            android:text="1.0" />
+    </RelativeLayout>
+
+    <ImageView style="@style/darkgray_line" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Beeway.iml" filepath="$PROJECT_DIR$/Beeway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/beeway/beeway.iml" filepath="$PROJECT_DIR$/beeway/beeway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_2" />
+    <RelativeLayout
+        android:id="@+id/issuecutomer_relative5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_issuecut"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/imgurl"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/img_issuecut"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/im_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="3dp"
+                android:padding="5dp"
+                android:background="@drawable/change"
+                android:gravity="center"
+                android:text="更换最美封面"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_middle" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/issuecutomer_relative1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/issuecutomer_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="你要去哪里？"
+            android:textSize="@dimen/font_size_middle" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:src="@drawable/iconfont_jiantou" />
+    </RelativeLayout>
+
+    <ImageView style="@style/darkgray_line" />
+
+    <RelativeLayout
+        android:id="@+id/issuecutomer_relative2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="筹集目标"
+            android:textSize="@dimen/font_size_middle" />
+
+        <EditText
+            android:id="@+id/issuecutomer_edit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/issuecutomer_yuan"
+            android:background="@null"
+            android:gravity="right"
+            android:textSize="@dimen/font_size_middle"
+            android:layout_marginRight="5dp"
+            android:hint="0" />
+
+        <TextView
+            android:id="@+id/issuecutomer_yuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="元"
+            android:textSize="@dimen/font_size_middle" />
+    </RelativeLayout>
+
+    <ImageView style="@style/darkgray_line" />
+
+    <RelativeLayout
+        android:id="@+id/issuecutomer_relative3"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:text="写句众筹的理由吧"
+            android:textSize="@dimen/font_size_middle" />
+
+
+    </RelativeLayout>
+
+    <ImageView style="@style/darkgray_line" />
+
+    <RelativeLayout
+        android:id="@+id/issuecutomer_relative4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/issuecutomer_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="top"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:textSize="@dimen/font_size_middle"
+            android:hint="理由那么多，你得给我钱！"
+            android:lines="3" />
+        <TextView
+            android:id="@+id/issuecutomer_liyou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:layout_below="@+id/issuecutomer_reason"
+            android:drawableLeft="@drawable/iconfont_shuaxin"
+            android:drawablePadding="5dp"
+            android:text="换个理由" />
+
+        <TextView
+            android:id="@+id/tv_clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/issuecutomer_reason"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/iconfont_qingchu"
+            android:drawablePadding="5dp"
+            android:text="清空" />
+    </RelativeLayout>
+
+    <ImageView style="@style/darkgray_line" />
+
+</LinearLayout>

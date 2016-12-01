@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beeway_background_color"
+    android:orientation="vertical">
+
+
+    <TextView
+        style="@style/beeway_white_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/beeway_title_bule"
+        android:gravity="center"
+        android:text="发现" />
+
+    <com.thvc.beeway.view.UserDefineScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_zhoubian"-->
+            <!--style="@style/beeway_black_text"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:drawableLeft="@drawable/icon_zhoubian"-->
+            <!--android:drawableRight="@drawable/icon_go"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:paddingLeft="12dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:text="  周边" />-->
+
+            <!--<ImageView style="@style/darkgray_line" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_shangcheng"-->
+            <!--style="@style/beeway_black_text"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:drawableLeft="@drawable/icon_shangcheng"-->
+            <!--android:drawableRight="@drawable/icon_go"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:paddingLeft="12dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:text="  商城" />-->
+
+            <TextView
+                android:id="@+id/tv_jingdian"
+                style="@style/beeway_black_text"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_jingdian"
+                android:drawablePadding="12dp"
+                android:drawableRight="@drawable/icon_go"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="20dp"
+                android:text="附近景点" />
+
+            <ImageView style="@style/darkgray_line" />
+
+            <TextView
+                android:id="@+id/tv_dingzhi"
+                style="@style/beeway_black_text"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_dingzhi"
+                android:drawablePadding="12dp"
+                android:drawableRight="@drawable/icon_go"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="20dp"
+                android:text="订制旅程" />
+
+            <ImageView style="@style/darkgray_line" />
+
+            <TextView
+                android:id="@+id/tv_shoucang"
+                style="@style/beeway_black_text"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_shoucang"
+                android:drawablePadding="12dp"
+                android:drawableRight="@drawable/icon_go"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="20dp"
+                android:text="我的收藏" />
+
+            <ImageView style="@style/darkgray_line" />
+
+            <TextView
+                android:id="@+id/tv_saoyisao"
+                style="@style/beeway_black_text"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_saoyisao"
+                android:drawablePadding="12dp"
+                android:drawableRight="@drawable/icon_go"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="20dp"
+                android:text="扫一扫" />
+
+            <ImageView style="@style/darkgray_line" />
+
+            <TextView
+                android:id="@+id/tv_erweima"
+                style="@style/beeway_black_text"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_erweima"
+                android:drawablePadding="12dp"
+                android:drawableRight="@drawable/icon_go"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="20dp"
+                android:text="我的二维码" />
+
+            <ImageView style="@style/darkgray_line" />
+
+            <TextView
+                android:id="@+id/tv_xunbao"
+                style="@style/beeway_black_text"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_xunbao"
+                android:drawablePadding="12dp"
+                android:drawableRight="@drawable/icon_go"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="20dp"
+                android:text="旅途寻宝" />
+
+            <ImageView style="@style/darkgray_line" />
+
+            <TextView
+                android:id="@+id/tv_fengmiduihuan"
+                style="@style/beeway_black_text"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_fengmishangcheng"
+                android:drawablePadding="12dp"
+                android:drawableRight="@drawable/icon_go"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="20dp"
+                android:text="蜂蜜兑换" />
+
+        </LinearLayout>
+    </com.thvc.beeway.view.UserDefineScrollView>
+</LinearLayout>

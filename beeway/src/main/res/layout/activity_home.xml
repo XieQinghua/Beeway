@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/t1"
+        layout="@layout/head" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/sv_track"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--轮播图布局-->
+            <FrameLayout
+                android:id="@+id/fl_banner"
+                android:layout_width="fill_parent"
+                android:layout_height="180dip"
+                android:layout_alignParentTop="true">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/v_dot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dip"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <!--<View-->
+                        <!--android:id="@+id/v_dot0"-->
+                        <!--style="@style/dot_style"-->
+                        <!--android:layout_height="5dp"-->
+                        <!--android:layout_width="5dp"-->
+                        <!--android:background="@drawable/dot_focused" />-->
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/home_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home_track" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="附近足迹" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_layout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home_travel" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="精彩游记" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_layout3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home_customer" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="众筹旅行" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_layout4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home_addfriend" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="旅途蜂友" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/home_bigTitile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="5dp"
+                    android:text="九月去哪里?"
+                    android:textColor="@color/beeway_title_bule"
+                    android:textSize="@dimen/font_size_middle" />
+
+                <TextView
+                    android:id="@+id/home_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="更多>>"
+                    android:textColor="@color/beeway_title_bule"
+                    android:textSize="@dimen/font_size_normal" />
+
+                <TextView
+                    android:id="@+id/home_smallTitile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_more"
+                    android:layout_centerHorizontal="true"
+                    android:text="不冷不热，正是旅行好时候"
+                    android:textSize="@dimen/font_size_normal" />
+
+                <LinearLayout
+                    android:id="@+id/home_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_smallTitile"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/home_linear1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginRight="3dp">
+
+                        <ImageView
+                            android:id="@+id/home_image1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/imgurl" />
+
+                        <TextView
+                            android:id="@+id/home_title1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="洞庭湖"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_middle" />
+
+                        <TextView
+                            android:id="@+id/home_ctitle1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="八百里洞庭"
+                            android:textSize="@dimen/font_size_normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_linear2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp">
+
+                        <ImageView
+                            android:id="@+id/home_image2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/imgurl" />
+
+                        <TextView
+                            android:id="@+id/home_title2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="洞庭湖"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_middle" />
+
+                        <TextView
+                            android:id="@+id/home_ctitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="八百里洞庭"
+                            android:textSize="@dimen/font_size_normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_linear3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_marginLeft="3dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/home_image3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/imgurl" />
+
+                        <TextView
+                            android:id="@+id/home_title3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="洞庭湖"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_middle" />
+
+                        <TextView
+                            android:id="@+id/home_ctitle3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="八百里洞庭"
+                            android:textSize="@dimen/font_size_normal" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="5dp"
+                    android:text="精选足迹"
+                    android:textColor="@color/beeway_title_bule"
+                    android:textSize="@dimen/font_size_middle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="美食，美景，购物应有尽有"
+                    android:textSize="@dimen/font_size_normal" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/home_track_listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:listSelector="#00000000"
+                android:padding="5dp"
+                android:scrollbars="none"
+                android:stackFromBottom="true"></ListView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="5dp"
+                    android:text="精选游记"
+                    android:textColor="@color/beeway_title_bule"
+                    android:textSize="@dimen/font_size_middle" />
+
+                <TextView
+                    android:id="@+id/home_more2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="更多>>"
+                    android:textColor="@color/beeway_title_bule"
+                    android:textSize="@dimen/font_size_normal" />
+
+                <TextView
+                    android:id="@+id/home_content2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_more2"
+                    android:layout_centerHorizontal="true"
+                    android:text="随手一拍，美景全在手机里"
+                    android:textSize="@dimen/font_size_normal" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/home_travel_listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:listSelector="#00000000"
+                android:paddingTop="5dp"
+                android:scrollbars="none"
+                android:stackFromBottom="true"></ListView>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</LinearLayout>

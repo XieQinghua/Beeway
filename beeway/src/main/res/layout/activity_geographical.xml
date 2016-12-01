@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentTop="true"
+        android:background="@color/beeway_title_bule">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/icon_padding"
+            android:src="@drawable/icon_fanhui" />
+
+        <RadioGroup
+            android:id="@+id/rg_dialog_title"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/background_view_transparent"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <RadioButton
+                android:id="@+id/btn_driving"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="驾车"
+                android:onClick="SearchButtonProcess"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_large" />
+
+            <RadioButton
+                android:id="@+id/btn_walk"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_toRightOf="@id/btn_conversation"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="步行"
+                android:onClick="SearchButtonProcess"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_large" />
+
+
+        </RadioGroup>
+    </RelativeLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+</LinearLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bt_blue_shape"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/activity_search_t1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_view_rounded_bottom"
+            android:gravity="center"
+            android:text="足迹"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_middle" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.02"
+            android:background="@color/beeway_title_bule" />
+
+        <TextView
+            android:id="@+id/activity_search_t2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="游记"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_middle" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/beeway_title_bule" />
+
+        <TextView
+            android:id="@+id/activity_search_t3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="景点"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_middle" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/beeway_title_bule" />
+
+        <TextView
+            android:id="@+id/activity_search_t4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="众筹"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_middle" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/beeway_title_bule" />
+
+        <TextView
+            android:id="@+id/activity_search_t5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="蜂友"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_middle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/activity_search_edit"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="4"
+            android:background="@drawable/background_view_rounded_while"
+            android:hint="请输入搜索词"
+            android:padding="6dp"
+            android:textSize="@dimen/font_size_middle" />
+
+        <Button
+            android:id="@+id/activity_search_bt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blue_normal_shape"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_middle" />
+
+    </LinearLayout>
+
+    <ImageView
+        style="@style/darkgray_line"
+        android:layout_margin="10dp" />
+
+    <ListView
+        android:id="@+id/activity_search_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:listSelector="#00000000"></ListView>
+</LinearLayout>

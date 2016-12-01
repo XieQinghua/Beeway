@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/integeral_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentTop="true"
+        android:background="@color/beeway_title_bule">
+
+        <ImageView
+            android:id="@+id/iv_integeral_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/icon_padding"
+            android:src="@drawable/icon_fanhui" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_integeral"
+                style="@style/beeway_white_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="蜂蜜"
+                android:textSize="@dimen/font_size_large" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tv_title_exchange_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/beeway_white_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/icon_padding"
+                android:textSize="@dimen/font_size_middle"
+                android:text="兑换记录" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/activity_integeral_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/integeral_ll"
+        android:scrollbars="none"
+        android:visibility="visible" />
+</RelativeLayout>

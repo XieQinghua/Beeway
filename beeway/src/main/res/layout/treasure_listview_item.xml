@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_view_rounded_while"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iconfont_tishi" />
+
+            <TextView
+                android:id="@+id/lv_addtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="ssssdjasdcas;dcp[a"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_large" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iconfont_tishi" />
+
+            <TextView
+                android:id="@+id/lv_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="5dp"
+                android:paddingLeft="4dp"
+                android:text="ssssdjasdcas;dcp[afffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+                android:textSize="@dimen/font_size_middle" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iconfont_tishi" />
+
+            <TextView
+                android:id="@+id/lv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="5dp"
+                android:paddingLeft="4dp"
+                android:text="ssssdjasdcas;dcp[afffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+                android:textSize="@dimen/font_size_middle" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/lv_finds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="5dp"
+                android:paddingLeft="4dp"
+                android:text="ssssdjasdcas;dcp[afffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+                android:textSize="@dimen/font_size_middle" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

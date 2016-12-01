@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+apply plugin: 'bugly'
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.thvc.beeway"
+        minSdkVersion 9
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+    }
+
+    //签名
+    signingConfigs {
+        debug {
+            storeFile file("C:/Users/Administrator/.android/debug.keystore")
+        }
+        relealse {
+            storeFile file("C:/Users/Administrator/beeway_key/beeway.keystore")
+            storePassword "beeway2015"
+            keyAlias "beeway_2015"
+            keyPassword "beeway2015"
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            signingConfig signingConfigs.relealse
+        }
+
+        release {
+            minifyEnabled false/*开启混淆*/
+            shrinkResources false/*删除无效的Resource*/
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.relealse
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile project(':library')
+    compile 'com.tencent.bugly:crashreport:1.2.6'
+    compile files('libs/AMap_Location_v1.4.1_20150917.jar')
+    compile files('libs/AMap_Navi_v1.4.0_20150916.jar')
+    compile files('libs/AMap_Services_V2.3.0.jar')
+    compile files('libs/Android_Map_2.5.1.20150827.jar')
+    compile files('libs/Msc.jar')
+}
+
+bugly {
+    appId = '900009659'    //注册时分配的App ID
+    appKey = 'GidjyQ9eOE4rH7XJ'  //注册时分配的App Key
+    execute = true   //是否生成符号表并自动上传，默认为true
+    upload = true  //可选配置，是否自动上传符号表开关，默认为true
+}

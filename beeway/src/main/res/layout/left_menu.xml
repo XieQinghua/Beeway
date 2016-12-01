@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="110dp"
+    android:background="#0000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:paddingLeft="5dp">
+
+        <RelativeLayout
+            android:id="@+id/left_menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.thvc.beeway.view.CircleImageView
+                android:id="@+id/left_menu_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/iv_user_more"
+                android:src="@drawable/head_portraits"
+                app:border_color="@color/white"
+                app:border_width="1dp" />
+
+            <TextView
+                android:id="@+id/left_menu_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/left_menu_img"
+                android:layout_weight="3"
+                android:text="蜂  友"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_middle" />
+
+            <ImageView
+                android:id="@+id/left_menu_erweima"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:src="@drawable/iconfont_erweima" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/left_menu_layout1"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_top_bar">
+
+                <ImageView
+                    android:id="@+id/id_img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/iconfont_shouye" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/id_img1"
+                    android:text="蜂友首页"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_middle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/rightjiantou" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/left_menu_layout2"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_top_bar">
+
+                <ImageView
+                    android:id="@+id/id_img2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/iconfont_huiyuan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/id_img2"
+                    android:text="会员中心"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_middle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/rightjiantou" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/left_menu_layout3"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_top_bar">
+
+                <ImageView
+                    android:id="@+id/id_img3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/iconfont_xiaoxi" />
+
+                <ImageView
+                    android:id="@+id/im_prompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/id_img3"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/unread_dot"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/id_img3"
+                    android:text="我的消息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_middle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/rightjiantou" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/left_menu_layout4"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_top_bar">
+
+                <ImageView
+                    android:id="@+id/id_img4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/iconfont_zuji" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/id_img4"
+                    android:text="我的足迹"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_middle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/rightjiantou" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/left_menu_layout5"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_top_bar">
+
+                <ImageView
+                    android:id="@+id/id_img5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/iconfont_youji" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/id_img5"
+                    android:text="我的游记"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_middle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/rightjiantou" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/left_menu_layout6"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_top_bar">
+
+                <ImageView
+                    android:id="@+id/id_img6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/iconfont_zhuxiao" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/id_img6"
+                    android:text="注销登录"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_middle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/rightjiantou" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

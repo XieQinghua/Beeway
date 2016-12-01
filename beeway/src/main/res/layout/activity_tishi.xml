@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentTop="true"
+        android:background="@color/beeway_title_bule">
+
+        <ImageView
+            android:id="@+id/iv_relback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/icon_padding"
+            android:src="@drawable/icon_fanhui" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+            <TextView
+                style="@style/beeway_white_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="宝藏提示" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_user_tishi1"
+        style="@style/beeway_black_text"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:drawableRight="@drawable/icon_go"
+        android:gravity="center_vertical"
+        android:textSize="13sp"
+        android:text="妖娆娘炮版:哎哟,那个谁谁谁啊,你咋酱紫呢?不要太用力,我的宝贝要慢慢挖......" />
+
+    <ImageView style="@style/darkgray_line" />
+
+        <TextView
+            android:id="@+id/tv_user_tishi2"
+            style="@style/beeway_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:drawableRight="@drawable/icon_go"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:text="神经爆棚版:你是谁?你从哪里来?你向何处去？你有什么资格挖我的宝藏?" />
+
+        <ImageView style="@style/darkgray_line" />
+
+        <TextView
+            android:id="@+id/tv_user_tishi3"
+            style="@style/beeway_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:drawableRight="@drawable/icon_go"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:text="闷骚宅男版:那个男同学,不要挖这个宝藏，我只属于萌妹子的哦!" />
+
+        <ImageView style="@style/darkgray_line" />
+
+        <TextView
+            android:id="@+id/tv_user_tishi4"
+            style="@style/beeway_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:drawableRight="@drawable/icon_go"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:text="深沉大叔版:小朋友,你不用找啦,最珍贵的宝藏在这里吗?其实在我的心里" />
+
+        <ImageView style="@style/darkgray_line" />
+
+        <TextView
+            android:id="@+id/tv_user_tishi5"
+            style="@style/beeway_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:drawableRight="@drawable/icon_go"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:text="可爱萌妹版:呵呵,我在这里藏了一个宝贝,看看谁最先找到" />
+
+        <ImageView style="@style/darkgray_line" />
+
+        <TextView
+            android:id="@+id/tv_user_tishi6"
+            style="@style/beeway_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:drawableRight="@drawable/icon_go"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:text="风骚武侠版:骚年,我看你骨骼清奇,这里有宝藏一份,能否找到,看你缘分!" />
+
+        <ImageView style="@style/darkgray_line" />
+
+
+        <TextView
+            android:id="@+id/tv_user_tishi7"
+            style="@style/beeway_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:drawableRight="@drawable/icon_go"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:text="传世神话版:一道亮光划过长空,坠落在此,千百年后,谁人知晓此处竟有传世之宝?" />
+
+        <ImageView style="@style/darkgray_line" />
+
+        <TextView
+            android:id="@+id/tv_user_tishi8"
+            style="@style/beeway_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:drawableRight="@drawable/icon_go"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:text="活动商家版:小店在这里藏了厚礼一份,谁挖到了就可以按藏宝内容来兑奖哈" />
+
+        <ImageView style="@style/darkgray_line" />
+
+        <TextView
+            android:id="@+id/tv_user_tishi9"
+            style="@style/beeway_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:drawableRight="@drawable/icon_go"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:text="最最普通版:我在这里埋下了宝藏,看你能不能找到" />
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

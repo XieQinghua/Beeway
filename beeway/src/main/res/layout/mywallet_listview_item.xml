@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/myWallet_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/myWallet_item_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="通过支付宝充值" />
+
+        <TextView
+            android:id="@+id/myWallet_item_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="+200.00"
+            android:textColor="@color/beeway_title_bule" />
+
+        <TextView
+            android:id="@+id/myWallet_item_addtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myWallet_item_remark"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="09-15" />
+
+        <TextView
+            android:id="@+id/myWallet_item_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/myWallet_item_remark"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="交易成功" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/myWallet_item_status"
+            android:background="@color/white" />
+    </RelativeLayout>
+
+    <com.thvc.beeway.view.ListItemDelete
+        android:id="@+id/bankCard_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/orange"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/bankCard_item_owners"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:text="交易成功"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/bankCard_item_bankname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bankCard_item_owners"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:text="交易成功" />
+
+            <TextView
+                android:id="@+id/bankCard_item_cardnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/bankCard_item_bankname"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btndel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                android:text="删除" />
+
+        </LinearLayout>
+    </com.thvc.beeway.view.ListItemDelete>
+    <RelativeLayout
+        android:id="@+id/pick_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/pick_item_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/beeway_title_bule"
+            android:text="通过支付宝充值" />
+
+        <TextView
+            android:id="@+id/pick_item_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:layout_below="@+id/pick_item_remark"
+            android:text="+200.00"
+            android:textColor="@color/beeway_title_bule" />
+
+        <TextView
+            android:id="@+id/pick_item_addtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pick_item_val"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="09-15" />
+
+        <TextView
+            android:id="@+id/pick_item_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/pick_item_val"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="交易成功" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/pick_item_status"
+            android:background="@color/white" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/bankName_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/bankName_item_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/beeway_title_bule"
+            android:text="通过支付宝充值" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/bankName_item_remark"
+            android:background="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!--发布宝藏title-->
+    <RelativeLayout
+        android:id="@+id/rl_rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentTop="true"
+        android:background="@color/beeway_title_bule">
+
+        <ImageView
+            android:id="@+id/iv_rel_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/icon_padding"
+            android:src="@drawable/icon_fanhui" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/beeway_white_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="埋下一个宝" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_rel_centers"
+            style="@style/beeway_white_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/icon_padding"
+            android:text="掩埋" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/issuecutomer_rel_relative"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="宝藏内容"
+            android:textSize="@dimen/font_size_middle" />
+
+        <TextView
+            android:id="@+id/issuecutomer_rel_liyou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/iconfont_shuaxin"
+            android:drawablePadding="5dp"
+            android:text="换一换" />
+
+        <TextView
+            android:id="@+id/tv_rel_clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/issuecutomer_rel_liyou"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/iconfont_qingchu"
+            android:drawablePadding="5dp"
+            android:text="清空" />
+    </RelativeLayout>
+
+    <ImageView style="@style/darkgray_line" />
+
+    <RelativeLayout
+        android:id="@+id/issuecutomer_rel_relative4"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp">
+
+        <EditText
+            android:id="@+id/issuecutomer_rel_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:background="@null"
+            android:gravity="top"
+            android:textSize="@dimen/font_size_middle"
+            android:hint="输入一段文字，传递一份真心"
+            android:lines="3" />
+    </RelativeLayout>
+
+    <ImageView style="@style/darkgray_line" />
+
+    <TextView
+        android:id="@+id/tv_user_tishi"
+        style="@style/beeway_black_text"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:drawableLeft="@drawable/iconfont_tishi"
+        android:drawableRight="@drawable/icon_go"
+        android:gravity="center_vertical"
+        android:text=" 你宝藏提示语(请选择)" />
+
+    <ImageView style="@style/darkgray_line" />
+
+    <TextView
+        android:id="@+id/tv_user_weizhi"
+        style="@style/beeway_black_text"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:drawableLeft="@drawable/ic_address_label"
+        android:drawableRight="@drawable/icon_go"
+        android:gravity="center_vertical"
+        android:text=" 选一个宝藏地址" />
+
+    <ImageView style="@style/darkgray_line" />
+</LinearLayout>

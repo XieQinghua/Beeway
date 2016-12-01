@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/im_mytravel_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/head_portraits" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/im_mytravel_image"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:id="@+id/tv_mytravel_time"
+                style="@style/beeway_black_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="5dp"
+                android:text="09-14 12:22" />
+            <!--android:drawableLeft="@drawable/icon_time"-->
+            <CheckBox
+                android:id="@+id/mytravel_chec_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/CheckboxTheme"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_mytravel_address"
+            style="@style/beeway_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="同步到游记" />
+        <!--android:drawableLeft="@drawable/icon_address"-->
+
+        <com.thvc.beeway.view.MarqueeTextView
+            android:id="@+id/tv_mytravel_con"
+            style="@style/beeway_black_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="贵州镇远法师是事实上事实上事实上事实上发事实上事实上事实上" />
+    </LinearLayout>
+</RelativeLayout>

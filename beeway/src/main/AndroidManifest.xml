@@ -1,0 +1,735 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.thvc.beeway"
+    android:installLocation="preferExternal"
+    android:versionCode="1"><!--减少apk在系统中占用空间-->
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+ <!--   <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 极光推送-->
+    <!-- Required -->
+    <permission
+        android:name="com.thvc.beeway.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.thvc.beeway.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+
+    <application
+        android:name=".application.BeewayApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!--颜松良  b2d66a0301d3b75371e09fa03863e6db-->
+        <!--谢庆华 d5d61cdc4eab0335306fe3238aab0323-->
+        <!-- 高德地图key-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="b2d66a0301d3b75371e09fa03863e6db" />
+
+        <!--百度定位服务-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- meta-data需要写在application中 百度API_KEY-->
+        <!--iapg14slx8p5o7ucR3zNrEyg-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="2lEjsbmL6hAGncl83GkYbDRm" />
+        <!--程序启动入口，同时做是否第一次运行APP判断-->
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--应用开屏页面-->
+        <activity
+            android:name="com.easemob.chatui.activity.SplashActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".fragment.TrackFragment"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!--首页-->
+        <activity
+            android:name=".fragment.HomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!--我的余额-->
+        <activity
+            android:name=".activity.MyWalletActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!--关于蜂友余额-->
+        <activity
+            android:name=".activity.OnWalletActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!--我的银行卡-->
+        <activity
+            android:name=".activity.BankCardActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!--查看更多-->
+        <activity
+            android:name=".activity.MoreOtherActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!--提现-->
+        <activity
+            android:name=".activity.MoneyPickActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!--众筹-->
+        <activity
+            android:name=".fragment.CustomerFragment"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!--发现-->
+        <activity
+            android:name=".fragment.FindFragment"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!--我的收藏列表-->
+        <activity
+            android:name=".activity.CollectActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!--订制旅程-->
+        <activity
+            android:name=".activity.CustomizationActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!--会话-->
+        <activity
+            android:name=".fragment.DialogFragment"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <!--会员中心-->
+        <activity
+            android:name=".activity.MemberCenterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <!--系统设置-->
+        <activity
+            android:name=".activity.SettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <!--我的消息中心-->
+        <activity android:name=".activity.MyMessageActivity">
+            <intent-filter>
+                <action android:name="jpush.testAction" />
+                <category android:name="jpush.testCategory" />
+            </intent-filter>
+        </activity>
+
+        <!--我的宝藏-->
+        <activity
+            android:name=".activity.TreasureActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <!--蜂友介绍-->
+        <activity
+            android:name=".activity.IntroduceActivity"
+            android:screenOrientation="portrait"></activity>
+        <!--修改个人资料-->
+        <activity
+            android:name=".activity.ChangeDataActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+        <!--修改密码-->
+        <activity
+            android:name=".activity.ChangePwdActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+        <!--用户详情-->
+        <activity
+            android:name=".activity.UserDetailsActivity"
+            android:screenOrientation="portrait"></activity>
+        <!--我的二维码-->
+        <activity
+            android:name=".Zing.MyErweimaActivity"
+            android:screenOrientation="portrait"></activity>
+        <!--扫一扫-->
+        <activity
+            android:name=".Zing.MipcaActivityCapture"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <!--搜索蜂友结果页面-->
+        <activity
+            android:name=".activity.SeachResultActivity"
+            android:screenOrientation="portrait"></activity>
+        <!--引导页-->
+        <activity
+            android:name=".activity.GuideActivity"
+            android:screenOrientation="portrait"></activity>
+        <!--发布足迹页面-->
+        <activity
+            android:name=".activity.AddTrackActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+        <!--发布游记页面-->
+        <activity
+            android:name=".activity.AddTravelActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+        <!--景点-->
+        <activity
+            android:name=".activity.ScenicActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <!--足迹详情界面-->
+        <activity
+            android:name=".activity.TrackDetailsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <!--景点详情界面-->
+        <activity
+            android:name=".activity.ScenicDetailsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <!--众筹详情界面-->
+        <activity
+            android:name=".activity.CustomerDetailsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <!--游记详情界面-->
+        <activity
+            android:name=".activity.TravelsDetailsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <!--寻宝详情界面-->
+        <activity
+            android:name=".activity.TreasureDetailsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <!--我资助他界面-->
+        <activity
+            android:name=".activity.SubsidizeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <!-- 查看图片 -->
+        <activity
+            android:name="com.thvc.beeway.activity.JSImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent"></activity>
+        <!-- 评论回复 -->
+        <activity
+            android:name="com.thvc.beeway.activity.JSRepleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent"
+            android:windowSoftInputMode="adjustResize|stateVisible"></activity>
+
+
+        <activity
+            android:name=".activity.ImageBucketChooseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.ImageChooseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+
+        <activity
+            android:name=".activity.ImageZoomActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+
+        <!-- 注册 -->
+        <activity
+            android:name="com.easemob.chatui.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+        <!-- 登陆 -->
+        <activity
+            android:name="com.easemob.chatui.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+
+        <!-- 我的足迹 -->
+        <activity
+            android:name="com.thvc.beeway.activity.MyTrackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <!-- 我的游记 -->
+        <activity
+            android:name="com.thvc.beeway.activity.MyTravelsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!-- 足迹查询 -->
+        <activity
+            android:name="com.thvc.beeway.activity.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+
+
+        <!-- 聊天页面 -->
+        <activity
+            android:name="com.easemob.chatui.activity.ChatActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <!-- 添加好友 -->
+        <activity
+            android:name="com.easemob.chatui.activity.AddContactActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+        <!-- 群组详情 -->
+        <activity
+            android:name="com.easemob.chatui.activity.GroupDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <!-- 群组列表 -->
+        <activity
+            android:name="com.easemob.chatui.activity.GroupsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <activity
+            android:name="com.easemob.chatui.activity.ChatRoomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!-- 聊天室详情 -->
+        <activity
+            android:name="com.easemob.chatui.activity.ChatRoomDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+
+        <!-- 新建群组 -->
+        <activity
+            android:name="com.easemob.chatui.activity.NewGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!-- 退出群组提示框 -->
+        <activity
+            android:name="com.easemob.chatui.activity.ExitGroupDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom"></activity>
+        <!-- 群组选人 -->
+        <activity
+            android:name="com.easemob.chatui.activity.GroupPickContactsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!-- 地图 -->
+
+        <!-- 新的朋友邀请消息页面 -->
+        <activity
+            android:name="com.easemob.chatui.activity.NewFriendsMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <!-- 转发消息用户列表页面 -->
+        <activity
+            android:name="com.easemob.chatui.activity.ForwardMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!-- 自定义的contextmenu -->
+        <activity
+            android:name="com.easemob.chatui.activity.ContextMenu"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle"></activity>
+        <!-- 自定义的alertdialog -->
+        <activity
+            android:name="com.easemob.chatui.activity.AlertDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle"></activity>
+        <!-- 显示下载大图页面 -->
+        <activity
+            android:name="com.easemob.chatui.activity.ShowBigImage"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <!-- 下载文件 -->
+        <activity
+            android:name="com.easemob.chatui.activity.ShowNormalFileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <!-- 黑名单 -->
+        <activity
+            android:name="com.easemob.chatui.activity.BlacklistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+
+        <!-- 公开的群聊列表 -->
+        <activity
+            android:name="com.easemob.chatui.activity.PublicGroupsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <activity
+            android:name="com.easemob.chatui.activity.PublicChatRoomsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!-- 地图 -->
+        <activity
+            android:name="com.easemob.chatui.activity.BaiduMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+
+        <activity
+            android:name="com.easemob.chatui.activity.GaoDeMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+
+        <!-- 语音通话 -->
+        <activity
+            android:name="com.easemob.chatui.activity.VoiceCallActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/nornal_style"></activity>
+        <!-- 视频通话 -->
+        <activity
+            android:name="com.easemob.chatui.activity.VideoCallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <!-- 群聊简单信息 -->
+        <activity
+            android:name="com.easemob.chatui.activity.GroupSimpleDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <!-- 群组黑名单用户列表 -->
+        <activity
+            android:name="com.easemob.chatui.activity.GroupBlacklistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <activity
+            android:name="com.easemob.chatui.activity.PublicGroupsSeachActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <activity
+            android:name="com.easemob.chatui.activity.EditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateVisible"></activity>
+        <activity
+            android:name="com.easemob.chatui.activity.ShowVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <!-- choose video -->
+        <activity
+            android:name="com.easemob.chatui.activity.ImageGridActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.easemob.chatui.activity.RecorderVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <!-- upload error log -->
+        <activity
+            android:name="com.easemob.chatui.activity.DiagnoseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+
+        <!-- iOS offline push nick -->
+        <activity
+            android:name="com.easemob.chatui.activity.OfflinePushNickActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <!-- robots list -->
+        <activity
+            android:name="com.easemob.chatui.activity.RobotsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.thvc.beeway.activity.IssueCutomerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+
+        <!--  <activity android:name="com.easemob.chatui.activity.MainActivity" />-->
+
+        <activity android:name="com.thvc.beeway.activity.MyFootstepsActivity" />
+
+        <activity android:name="com.thvc.beeway.activity.ReleaseTreasureActivity" />
+
+        <activity android:name="com.thvc.beeway.activity.TreasureTishiActivity" />
+
+        <activity android:name="com.thvc.beeway.activity.FeedbackActivity" />
+
+        <activity android:name="com.thvc.beeway.photos.NewTestPicActivity" />
+
+        <activity android:name="com.thvc.beeway.photos.NewImageGridActivity" />
+
+        <activity android:name="com.thvc.beeway.activity.IntegralActivity" />
+
+        <activity android:name="com.thvc.beeway.activity.MyHoneyActivity" />
+
+        <activity android:name="com.thvc.beeway.activity.HoneyRuleActivity" />
+
+        <activity android:name="com.thvc.beeway.activity.ExchangeRecordActivity" />
+
+        <activity android:name="com.thvc.beeway.activity.ExchangeActivity" />
+
+        <activity android:name="com.thvc.beeway.activity.HistoricalDetailsActivity" />
+
+        <activity android:name="com.thvc.beeway.activity.MyTravels" />
+
+        <activity
+            android:name="com.thvc.beeway.activity.GeoCoderActivity"
+            android:configChanges="locale|layoutDirection" />
+
+        <!--关于高德地图导航接面-->
+        <activity
+            android:name="com.thvc.beeway.activity.SimpleNaviRouteActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+
+        <activity
+            android:name="com.thvc.beeway.activity.SimpleNaviActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+
+
+        <!--环信即时通讯名称-->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="thrc#hualvfengyou" />
+        <!-- 声明sdk所需的service easemob-demo#chatdemoui-->
+        <service
+            android:name="com.easemob.chat.EMChatService"
+            android:exported="true" />
+
+
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--微信分享回调 -->
+        <activity
+            android:name=".cn.sharesdk.demo.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- QQ客户端回调 -->
+        <activity
+            android:name="cn.sharesdk.tencent.qq.ResultReceiver"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <!--
+            如果集成QQ分享，或者使用QQ客户端来进行QQ空间的分享，须要在此处添加一个对ACTION_VIEW
+            事件的过滤器，其中的scheme是“tencent”前缀再开发者应用的加上appId。如果此过滤器不设置，
+            则分享结束以后不能得到正确的回调
+            -->
+            <intent-filter android:priority="1000">
+                <data android:scheme="tencent100371282" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- Required -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="com.thvc.beeway" />
+            </intent-filter>
+        </service>
+
+        <!-- Required -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <category android:name="com.thvc.beeway" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="com.thvc.beeway" />
+            </intent-filter>
+        </receiver>
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.thvc.beeway" />
+            </intent-filter>
+        </activity>
+        <!-- Required SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false"></service>
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+
+        <!-- Required. For publish channel feature -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。-->
+        <!-- 例如: -->
+        <!-- 发到 Google Play 的APK可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <!-- 目前这个渠道统计功能的报表还未开放。-->
+        <!--<meta-data android:name="JPUSH_CHANNEL" android:value="3918d1603f38c314759cedc9"/>-->
+        <!--&lt;!&ndash; Required. AppKey copied from Portal &ndash;&gt;-->
+        <!--<meta-data android:name="JPUSH_APPKEY" android:value="82a4505a7486f1b43777ce4c"/>-->
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name="com.thvc.beeway.utils.MyReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <category android:name="com.thvc.beeway" />
+            </intent-filter>
+        </receiver>
+
+
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+
+        <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="605db610792628b0b23e8b83" />
+
+    </application>
+</manifest>

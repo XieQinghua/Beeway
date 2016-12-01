@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/beeway_title_bule">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/head2_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_top_bar">
+
+            <ImageView
+                android:id="@+id/head2_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:onClick="back"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_fanhui" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/iv_user_img">
+                <TextView
+                    android:id="@+id/head2_title"
+                    style="@style/beeway_white_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_middle"
+                    android:layout_gravity="center_horizontal"
+                    android:text="发布众筹" />
+                <TextView
+                    android:id="@+id/head2_title2"
+                    style="@style/beeway_white_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_middle"
+                    android:layout_gravity="center_horizontal"
+                    android:text="发布众筹"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/head2_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/iconfont_tubiao2zhoubian"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/head2_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/icon_padding"
+                    android:text="发布"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_middle" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/head2_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:src="@drawable/iconfont_tubiao2zhoubian"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

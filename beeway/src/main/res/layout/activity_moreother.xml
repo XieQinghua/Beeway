@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include
+        android:id="@+id/t1"
+        layout="@layout/head_2" />
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/more_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/t1"
+        android:cacheColorHint="#00000000"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:listSelector="#00000000"></com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    <ImageView
+        android:id="@+id/more_image"
+        android:layout_below="@+id/more_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/nullpage"
+        android:visibility="gone" />
+
+</RelativeLayout>

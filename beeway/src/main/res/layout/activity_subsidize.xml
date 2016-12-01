@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_2" />
+
+    <RelativeLayout
+        android:id="@+id/subsidize_relative"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="有钱就是任性，打赏理由"
+            android:textSize="@dimen/font_size_middle" />
+
+        <TextView
+            android:id="@+id/subsidize_exchange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/iconfont_shuaxin"
+            android:drawablePadding="5dp"
+            android:text="换个理由" />
+
+        <TextView
+            android:id="@+id/subsidize_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/subsidize_exchange"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/iconfont_qingchu"
+            android:drawablePadding="5dp"
+            android:text="清空" />
+    </RelativeLayout>
+
+    <ImageView style="@style/darkgray_line" />
+
+    <RelativeLayout
+        android:id="@+id/subsidize_relative2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/subsidize_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="top"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:textSize="@dimen/font_size_middle"
+            android:background="@drawable/background_view_rounded_while"
+            android:hint="理由那么多，你得给我钱！"
+            android:lines="3" />
+
+    </RelativeLayout>
+
+    <ImageView style="@style/darkgray_line" />
+
+    <LinearLayout
+        android:id="@+id/subsidize_relative3"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_height="70dp">
+
+        <Button
+            android:id="@+id/subsidize_bt10"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:layout_gravity="center"
+            android:textSize="@dimen/font_size_large"
+            android:onClick="onClick"
+            android:background="@drawable/background_view_rounded_while"
+            />
+        <Button
+            android:id="@+id/subsidize_bt20"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/font_size_large"
+            android:onClick="onClick"
+            android:background="@drawable/background_view_rounded_while"
+            />
+        <Button
+            android:id="@+id/subsidize_bt50"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/font_size_large"
+            android:onClick="onClick"
+            android:background="@drawable/background_view_rounded_while"
+            />
+        <EditText
+            android:id="@+id/subsidize_et"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:hint="其他"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="3dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/font_size_large"
+            android:layout_gravity="center"
+            android:background="@drawable/background_view_rounded_while"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_large"
+            />
+
+    </LinearLayout>
+
+    <ImageView style="@style/darkgray_line" />
+
+</LinearLayout>

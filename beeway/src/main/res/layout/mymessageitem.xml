@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.thvc.beeway.view.ListItemDelete
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bankCard_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:orientation="horizontal">
+
+            <com.thvc.beeway.view.CircleImageView
+                android:id="@+id/im_messag"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/head_portraits"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/tv_messag_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="sssssssssssssssdasdasdas"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/tv_messag_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_messag_content"
+                    android:layout_marginTop="5dp"
+                    android:text="1231231"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/font_size_small"/>
+            </RelativeLayout>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_del"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/red"
+            android:text="删除" />
+
+    </LinearLayout>
+    </com.thvc.beeway.view.ListItemDelete>
