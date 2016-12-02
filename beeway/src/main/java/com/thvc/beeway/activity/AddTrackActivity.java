@@ -80,7 +80,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * 项目名称：Beeway
@@ -145,7 +144,6 @@ public class AddTrackActivity extends BaseActivity implements FaceView.Work {
     private String resumeId;
 
     private CustomProgressDialog pd;
-
 
 
     @Override
@@ -602,6 +600,7 @@ public class AddTrackActivity extends BaseActivity implements FaceView.Work {
                             }
                         }, null);
                     }
+
                     @Override
                     public void onFailure(HttpException e, String s) {
                         //获得token失败
