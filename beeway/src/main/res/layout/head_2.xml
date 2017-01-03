@@ -21,29 +21,32 @@
                 android:onClick="back"
                 android:padding="@dimen/icon_padding"
                 android:src="@drawable/icon_fanhui" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_centerInParent="true"
-                android:layout_toRightOf="@id/iv_user_img">
+                android:layout_toRightOf="@id/iv_user_img"
+                android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/head2_title"
                     style="@style/beeway_white_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/font_size_middle"
                     android:layout_gravity="center_horizontal"
-                    android:text="发布众筹" />
+                    android:text="发布众筹"
+                    android:textSize="@dimen/font_size_middle" />
+
                 <TextView
                     android:id="@+id/head2_title2"
                     style="@style/beeway_white_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/font_size_middle"
                     android:layout_gravity="center_horizontal"
                     android:text="发布众筹"
-                    android:visibility="gone"/>
+                    android:textSize="@dimen/font_size_middle"
+                    android:visibility="gone" />
 
             </LinearLayout>
 
